@@ -15,7 +15,10 @@ spring:
 #Configure of the age
 app:
   min-age: 18
+  max-age: 100
 
 #Configure server
 server:
   port: 9292
+
+

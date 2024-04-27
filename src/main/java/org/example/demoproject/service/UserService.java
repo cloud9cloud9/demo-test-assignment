@@ -1,8 +1,7 @@
 package org.example.demoproject.service;
 
-import org.example.demoproject.dto.SearchUserRequestDto;
 import org.example.demoproject.dto.UserDto;
-import org.example.demoproject.entity.User;
+import org.example.demoproject.dto.UserUpdateDto;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -11,13 +10,14 @@ import java.util.List;
 @Service
 public interface UserService {
 
-    void create(UserDto entity);
+    UserDto create(UserDto entity);
 
-    void update(Long id,
-                UserDto entity);
+    UserDto update(Long id,
+                   UserUpdateDto entity);
 
-    void delete(Long id);
+    UserDto delete(Long id);
 
-    List<UserDto> findUserWithDateOfBirthBetween(SearchUserRequestDto requestDto);
+    List<UserDto> findUserWithDateOfBirthBetween(LocalDate from,
+                                                 LocalDate to);
 
 }
