@@ -1,0 +1,15 @@
+#Configured h2 db
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+#Configure of the age
+app:
+  min-age: 18
+  max-age: 100

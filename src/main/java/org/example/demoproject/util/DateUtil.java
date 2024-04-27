@@ -1,0 +1,25 @@
+package org.example.demoproject.util;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+
+@Component
+public class DateUtil {
+
+    @Value("${app.min-age}")
+    private int MIN_AGE;
+
+    @Value("${app.max-age}")
+    private int MAX_AGE;
+
+    public boolean isAdult(LocalDate birthDate) {
+        LocalDate minDate = LocalDate.now().minusYears(MIN_AGE);
+        return !birthDate.isAfter(minDate) && !birthDate.isBefore(LocalDate.now().minusYears(MAX_AGE));
+    }
+
+    public boolean isDateBefore(LocalDate date, LocalDate referenceDate) {
+        return date.isBefore(referenceDate);
+    }
+}

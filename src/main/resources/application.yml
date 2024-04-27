@@ -1,0 +1,24 @@
+spring:
+  #Configure datasource
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/practice
+    username: postgres
+    password: postgres
+  #Configure Hibernate
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+#Configure of the age
+app:
+  min-age: 18
+  max-age: 100
+
+#Configure server
+server:
+  port: 9292
+
+
