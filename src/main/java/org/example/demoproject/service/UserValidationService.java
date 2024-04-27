@@ -22,8 +22,8 @@ public class UserValidationService {
     }
 
     public void validateUserAgeBetween(LocalDate from, LocalDate to) {
-        final var isAdult = dateUtil.isDateBefore(from, to);
-        if (!isAdult) {
+        final var isDateBefore = dateUtil.isDateBefore(from, to);
+        if (!isDateBefore) {
             throw new DateException();
         }
     }
