@@ -23,12 +23,12 @@ This project is a simple CRUD application for managing user entities. It include
 - Java
 - Spring Boot
 - Spring Data JPA
-- Maven
+- Gradle
 
 ## Setup
 1. Clone the repository: `git clone [https://github.com/cloud9cloud9/demo-test-assignment.git]`
-3. Build the project: `mvn clean install`
-4. Run the application: `mvn spring-boot:run`
+3. Build the project: `./gradlew build`
+4. Run the application: `./gradlew bootRun`
 5. Access the application endpoints using a REST client or web browser.
 
 ## Configuration

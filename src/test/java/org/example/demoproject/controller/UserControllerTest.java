@@ -2,11 +2,9 @@ package org.example.demoproject.controller;
 
 import org.example.demoproject.dto.UserDto;
 import org.example.demoproject.dto.UserUpdateDto;
-import org.example.demoproject.entity.User;
 import org.example.demoproject.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.*;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
