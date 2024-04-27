@@ -14,19 +14,17 @@ public class UserValidationService {
 
     private final DateUtil dateUtil;
 
-    public boolean validateUserAge(LocalDate birthDate) {
+    public void validateUserAge(LocalDate birthDate) {
         final var isAdult = dateUtil.isAdult(birthDate);
         if (!isAdult) {
             throw new InvalidUserAgeException();
         }
-        return true;
     }
 
-    public boolean validateUserAgeBetween(LocalDate from, LocalDate to) {
+    public void validateUserAgeBetween(LocalDate from, LocalDate to) {
         final var isAdult = dateUtil.isDateBefore(from, to);
         if (!isAdult) {
             throw new DateException();
         }
-        return true;
     }
 }
